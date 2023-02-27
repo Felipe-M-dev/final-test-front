@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Hito 2 - Desarrollo Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Lee todo el documento antes de comenzar el desarrollo grupal, para asegurarte de tener el máximo de puntaje y enfocar bien los esfuerzos.
 
-## Available Scripts
+## Descripción
 
-In the project directory, you can run:
+El segundo hito consiste en el desarrollo de la aplicación cliente con React, en donde debes:
 
-### `npm start`
+- Crear un nuevo proyecto con las dependencias acorde al diseño y temática definida en el hito anterior.
+- Usar los componentes para la reutilización de código y separación de secciones integrando los hooks necesarios que correspondan.
+- Usar React Router para la navegación de vistas por rutas.
+- Utilizar Context API para el manejo de estado global.
+- Preparar la aplicación para el consumo de datos siguiendo el contrato definido en el hito anterior.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Se recomienda utilizar un framework de CSS para agilizar la construcción de la interfaz gráfica del proyecto.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A continuación te mostramos imágenes de referencia para el proyecto:
 
-### `npm test`
+<p align="center">
+  <img src="https://github.com/Felipe-M-dev/final-test-front/blob/main/public/00.png?raw=true?raw=true" alt="00"><br>
+Imagen 1. Referencia del proyecto.</br>
+Fuente: Desafío Latam
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center">
+  <img src="https://github.com/Felipe-M-dev/final-test-front/blob/main/public/01.png?raw=true?raw=true" alt="01"><br>
+Imagen 2. Referencia del proyecto.</br>
+Fuente: Desafío Latam
+</p>
 
-### `npm run build`
+<p align="center">
+  <img src="https://github.com/Felipe-M-dev/final-test-front/blob/main/public/02.png?raw=true?raw=true" alt="02"><br>
+Imagen 3. Referencia del proyecto.</br>
+Fuente: Desafío Latam
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="center">
+  <img src="https://github.com/Felipe-M-dev/final-test-front/blob/main/public/03.png?raw=true?raw=true" alt="03"><br>
+Imagen 4. Referencia del proyecto</br>
+Fuente: Desafío Latam
+</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Requerimientos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Crear un nuevo proyecto usando npx e instalar las dependencias. __(1 Punto)__
 
-### `npm run eject`
+2. Utilizar React Router para la navegación entre rutas. __(3 Puntos)__
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Reutilizar componentes haciendo uso del paso de props y renderización dinámica. __(1 Punto)__
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Hacer uso de los hooks para un desarrollo ágil y reactivo. __(2 Puntos)__
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Utilizar Context para el manejo del estado global. __(3 Puntos)__
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+😊¡Mucho éxito!
