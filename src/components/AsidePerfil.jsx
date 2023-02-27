@@ -10,8 +10,6 @@ export default function AsidePerfil() {
 
     const { setSession, data } = useContext(Context);
 
-    console.log(data.email)
-
     const logout = () => {
         setSession(null);
         alert(`Sesión cerrada con éxito, hasta pronto ${data.name}`);
@@ -23,7 +21,7 @@ export default function AsidePerfil() {
         <div>
             <Link to='/perfil' style={{ textDecoration: 'none' }}>
                 <div style={{ color: 'white', paddingBottom: '10vh' }}>
-                    <img src="logo-white.png" alt="logo-white" style={{ width: '30px' }}/>
+                    <img src="./logo-white.png" alt="logo-white" style={{ width: '30px' }}/>
                     <h6>KANRI</h6>
                     <hr />
                     <h6>Bienvenido</h6> 

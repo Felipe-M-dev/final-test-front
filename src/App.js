@@ -6,7 +6,7 @@ import Home from './views/Home'
 import Inventory from './views/Inventory';
 import IpList from './views/IpList';
 import Login from './views/Login'
-import NewServer from './views/NewServer';
+import NewServers from './views/NewServers';
 import Perfil from './views/Perfil'
 import Register from './views/Register'
 
@@ -23,7 +23,7 @@ export default function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/perfil" element={<Perfil />} />
             <Route path="/inventario" element={<Inventory />} />
-            <Route path="/inventario/new" element={<NewServer />} />
+            <Route path="/inventario/new" element={<NewServers />} />
             <Route path="/iplist" element={<IpList />} />
           </Routes>
         </BrowserRouter>

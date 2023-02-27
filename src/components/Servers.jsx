@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import Server from "./Server";
 import ContextOrigin from "../Context";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const { Context } = ContextOrigin;
 
 export default function Servers() {
@@ -24,6 +26,12 @@ export default function Servers() {
                     placeholder="Buscar por nombre o IP"
                     />
                 </div>
+
+                <Link to='/inventario/new'>
+                    <Button variant="success" style={{ marginLeft: '100vh' }}>
+                        Agregar server
+                    </Button>
+                </Link>
 
                 <div className="servers d-flex">
                     {serversFiltradas.map((p, i) => {

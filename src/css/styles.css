@@ -4,6 +4,6 @@
     background-size: cover;
 }
 
-#perfil, #inventario, #ip-list {
+#perfil, #inventario, #ip-list, #new-perfil {
     display: flex;
 }
