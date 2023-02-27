@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
 
-function App() {
+import Context from "./Context";
+
+import Home from './views/Home'
+import Inventory from './views/Inventory';
+import IpList from './views/IpList';
+import Login from './views/Login'
+import NewServer from './views/NewServer';
+import Perfil from './views/Perfil'
+import Register from './views/Register'
+
+const { Provider } = Context;
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Provider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/perfil" element={<Perfil />} />
+            <Route path="/inventario" element={<Inventory />} />
+            <Route path="/inventario/new" element={<NewServer />} />
+            <Route path="/iplist" element={<IpList />} />
+          </Routes>
+        </BrowserRouter>
+      </Provider>
     </div>
   );
 }
-
-export default App;
