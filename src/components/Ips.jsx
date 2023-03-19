@@ -4,7 +4,7 @@ import { Container, Form, Table, Col, Row } from "react-bootstrap";
 
 export default function Ips() {
 
-    const url = 'http://kanri-inventory-back.up.railway.app'
+    const url = 'https://kanri-inventory-back.up.railway.app'
     const navigate = useNavigate()
 
     const [servers, setServers] = useState([])

@@ -13,7 +13,7 @@ import usePasswordToggle from '../hooks/usePasswordToggle'
 
 
 export default function ServerForm() {
-    const url = 'http://kanri-inventory-back.up.railway.app'
+    const url = 'https://kanri-inventory-back.up.railway.app'
     const navigate = useNavigate()
     const params = useParams()
 

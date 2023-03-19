@@ -4,7 +4,7 @@ import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 
 export default function ServersListHero() {
 
-    const url = 'http://kanri-inventory-back.up.railway.app'
+    const url = 'https://kanri-inventory-back.up.railway.app'
     const navigate = useNavigate()
 
     const [servers, setServers] = useState([])
