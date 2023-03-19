@@ -1,3 +1,3 @@
 export default {
-    apiUrl: 'https://kanri-auth-back.up.railway.app/',
+    apiUrl: process.env.REACT_APP_API_AUTH_URL,
 };

@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router'
-import { Container, Form, Table, Col, Row } from "react-bootstrap";
+import { Container, Form, Table, Row } from "react-bootstrap";
 
 export default function Ips() {
 
     const url = 'https://kanri-inventory-back.up.railway.app'
-    const navigate = useNavigate()
 
     const [servers, setServers] = useState([])
     const [search, setSearch] = useState("")

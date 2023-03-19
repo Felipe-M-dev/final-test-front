@@ -22,6 +22,7 @@ export default function Registrarse() {
       name: data.user.name,
       company: data.user.company,
     })
+    console.log(updated)
   }
 
   const handleChange = async (e) => {
@@ -31,13 +32,18 @@ export default function Registrarse() {
   const data = { password: password }
 
   const handleClick = async () => {
-    setUpdated(`{"password": "${password}"}`);
-    await fetch(`${config.apiUrl}users/${curretnuser.id}`, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'Application/json' },
-      body: JSON.stringify(data),
-    })
-    alert('Contraseña actualizada con éxito.')
+
+    if (password === "") {
+      alert('No ingresaste cambios en la contraseña.')      
+    } else {
+      setUpdated(`{"password": "${password}"}`);
+      await fetch(`${config.apiUrl}users/${curretnuser.id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'Application/json' },
+        body: JSON.stringify(data),
+      })
+      alert('Contraseña actualizada con éxito.')
+    }
   };
  
 
@@ -46,10 +52,18 @@ export default function Registrarse() {
   }, [])
 
   return (
-    <div className="pt-5" style={{ width: '90vh', height: '82vh', textAlign: 'center' }}>
+    <div 
+    className="pt-5" 
+    style={{ 
+      display: 'flex', 
+      justifyContent: 'space-around', 
+      width: '120vh', 
+      height: '65vh', 
+      textAlign: 'center' }}
+    >
       <Form 
-      className="w-50 border p-3 mx-5 rounded text-white" 
-      style={{ backgroundColor: '#324adc' }}
+        className="w-50 border p-3 mx-5 rounded text-white" 
+        style={{ backgroundColor: '#324adc' }}
       >
         <div>
           <span>Perfil</span>
