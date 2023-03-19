@@ -1,6 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import jwtDecode from 'jwt-decode';
+import { useState, useEffect } from "react";
+import config from '../config/auth.config';
 
 export default function AsidePerfil() {
 
@@ -8,6 +10,23 @@ export default function AsidePerfil() {
     const user = jwtDecode(token);
 
     const navigate = useNavigate();
+
+    const [curretnuser, setCurrentuser] = useState('');
+  
+    const loadUser = async () => {
+      const res = await fetch(`${config.apiUrl}users/${user.email}`)
+      const data = await res.json()
+      setCurrentuser({
+        id: data.user.id,
+        name: data.user.name,
+        company: data.user.company,
+        avatar_url: data.user.avatar_url,
+      })
+    }
+
+    useEffect(() => {
+        loadUser()
+    }, [])
 
     const logout = () => {
         alert(`Sesión cerrada con éxito, hasta pronto ${user.email}`);
@@ -22,8 +41,9 @@ export default function AsidePerfil() {
                     <img src="https://i.ibb.co/hfNScjt/logo-white.png" alt="logo-white" style={{ width: '30px' }}/>
                     <h6>KANRI</h6>
                     <hr />
+                    <img src={`${curretnuser.avatar_url}`} alt="avatar" style={{height: "50px", borderRadius: '6rem', marginBottom:'2rem'}}/>
                     <h6>Bienvenido</h6> 
-                    {user.email}
+                    {curretnuser.name}
                 </div>
             </Link>
             <Link to="/perfil" className="text-white text-decoration-none" >

@@ -11,6 +11,7 @@ export default function Register() {
     const [name, setName] = useState('');
     const [company, setCompany] = useState('');    
     const [password, setPassword] = useState('');
+    const [avatar_url, setAvatar_url] = useState('');
 
     const navigate = useNavigate()
 
@@ -24,9 +25,9 @@ export default function Register() {
                 name,
                 company,
                 password,
+                avatar_url,
             });
-
-            console.log(response.data);
+            console.log(response);
             alert("Usuario creado con éxito, intente iniciar sesión.");
             navigate('/login')
         } catch (error) {
@@ -74,7 +75,7 @@ export default function Register() {
                                         />
                                     </Form.Group>
 
-                                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                                    <Form.Group className="mb-3" controlId="formBasicName">
                                         <Form.Label>Nombre</Form.Label>
                                         <Form.Control
                                             type="text" 
@@ -85,7 +86,7 @@ export default function Register() {
                                         />
                                     </Form.Group>
 
-                                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                                    <Form.Group className="mb-3" controlId="formBasicCompany">
                                         <Form.Label>Empresa</Form.Label>
                                         <Form.Control
                                             type="text" 
@@ -104,6 +105,17 @@ export default function Register() {
                                             name="password" 
                                             onChange={(e) => setPassword(e.target.value)}
                                             placeholder="*********"
+                                        />
+                                    </Form.Group>
+
+                                    <Form.Group className="mb-3" controlId="formBasicAvatar">
+                                        <Form.Label>Imagen avatar (URL 400x400)</Form.Label>
+                                        <Form.Control
+                                            type="text" 
+                                            value={avatar_url}
+                                            name="avatar" 
+                                            onChange={(e) => setAvatar_url(e.target.value)}
+                                            placeholder="https://image.com"
                                         />
                                     </Form.Group>
 

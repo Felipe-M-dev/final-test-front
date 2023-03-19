@@ -11,14 +11,14 @@ export default function ServersListHero() {
     const [search, setSearch] = useState("")
   
     const loadServers = async () => {
-        const res = await fetch(`${url}/servers`)
+        const res = await fetch(`${url}servers`)
         const data = await res.json()
         setServers(data)
     }
     
     const handleDelete = async (id) => {
         try {
-            await fetch(`${url}/servers/${id}` ,{
+            await fetch(`${url}servers/${id}` ,{
                 method: 'DELETE',
             })
             setServers(servers.filter(server => server.id !== id))
