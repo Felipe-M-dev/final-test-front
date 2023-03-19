@@ -4,22 +4,21 @@ import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 
 export default function ServersListHero() {
 
-    const url = 'http://localhost'
-    const port = '3001'
+    const url = 'http://kanri-inventory-back.up.railway.app'
     const navigate = useNavigate()
 
     const [servers, setServers] = useState([])
     const [search, setSearch] = useState("")
   
     const loadServers = async () => {
-        const res = await fetch(`${url}:${port}/servers`)
+        const res = await fetch(`${url}/servers`)
         const data = await res.json()
         setServers(data)
     }
     
     const handleDelete = async (id) => {
         try {
-            await fetch(`${url}:${port}/servers/${id}` ,{
+            await fetch(`${url}/servers/${id}` ,{
                 method: 'DELETE',
             })
             setServers(servers.filter(server => server.id !== id))

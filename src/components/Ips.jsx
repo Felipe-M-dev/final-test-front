@@ -4,15 +4,14 @@ import { Container, Form, Table, Col, Row } from "react-bootstrap";
 
 export default function Ips() {
 
-    const url = 'http://localhost'
-    const port = '3001'
+    const url = 'http://kanri-inventory-back.up.railway.app'
     const navigate = useNavigate()
 
     const [servers, setServers] = useState([])
     const [search, setSearch] = useState("")
   
     const loadServers = async () => {
-        const res = await fetch(`${url}:${port}/servers`)
+        const res = await fetch(`${url}/servers`)
         const data = await res.json()
         setServers(data)
     }
@@ -31,7 +30,7 @@ export default function Ips() {
         <Container>
             <h3 style={{
                 padding: '15px'
-            }}>Estado de IPs</h3>
+            }}>Estado de servers</h3>
             <hr />
             <Container>
                     <div style={{

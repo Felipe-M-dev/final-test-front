@@ -13,8 +13,7 @@ import usePasswordToggle from '../hooks/usePasswordToggle'
 
 
 export default function ServerForm() {
-    const url = 'http://localhost'
-    const port = '3001'
+    const url = 'http://kanri-inventory-back.up.railway.app'
     const navigate = useNavigate()
     const params = useParams()
 
@@ -49,13 +48,13 @@ export default function ServerForm() {
         setLoading(true)
     
         if (editing) {
-            await fetch(`${url}:${port}/servers/${params.id}`, {
+            await fetch(`${url}/servers/${params.id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'Application/json' },
                 body: JSON.stringify(server),
             })
         } else {
-            await fetch(`${url}:${port}/servers`, {
+            await fetch(`${url}/servers`, {
                 method: 'POST',
                 body: JSON.stringify(server),
                 headers: { 'Content-Type': 'Application/json' },
@@ -69,7 +68,7 @@ export default function ServerForm() {
     const handleChange = e => setServer({...server, [e.target.name]: e.target.value})
 
     const loadServer = async (id) => {
-        const res = await fetch(`${url}:${port}/servers/${id}`)
+        const res = await fetch(`${url}/servers/${id}`)
         const data = await res.json()
         setServer({
             id: data.id,

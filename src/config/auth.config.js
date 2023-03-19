@@ -1,3 +1,3 @@
 export default {
-    apiUrl: 'http://localhost:3002/',
+    apiUrl: 'https://kanri-auth-back.up.railway.app/',
 };
