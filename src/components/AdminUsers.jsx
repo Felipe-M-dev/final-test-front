@@ -82,6 +82,7 @@ export default function AdminUsers() {
                                     <Card.Text>Correo: {userlist.email}</Card.Text>
                                     <Card.Text>Empresa: {userlist.company}</Card.Text>
                                 </Card.Body>
+                                <Button variant="warning" style={{margin: '0 1rem 1rem'}}>Editar</Button>
                                 <Button variant="danger" style={{margin: '0 1rem 1rem'}} onClick={() => handleDelete(userlist.id)}>Eliminar</Button>
                             </Card>
 
