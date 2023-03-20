@@ -1,6 +1,6 @@
 import AsidePerfil from "../components/AsidePerfil";
 import Footer from "../components/Footer";
-import Servers from "../components/Servers";
+import AdminUsers from "../components/AdminUsers";
 import '../css/styles.css'
 
 export default function Inventory() {
@@ -8,7 +8,7 @@ export default function Inventory() {
     <>
         <div id="inventario" className="bg-light">
             <AsidePerfil />
-            <Servers />
+            <AdminUsers />
         </div>
         <Footer />
     </>

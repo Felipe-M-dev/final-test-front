@@ -47,17 +47,20 @@ export default function AsidePerfil() {
                 </div>
             </Link>
             <Link to="/perfil" className="text-white text-decoration-none" >
-            <h6 className="mb-3">Mis datos</h6>
+                <h6 className="mb-3">Mis datos</h6>
             </Link>
             <Link to="/inventario" className="text-white text-decoration-none">
-            <h6 className="mb-3">Inventario</h6>
+                <h6 className="mb-3">Inventario</h6>
             </Link>
             <Link to="/iplist" className="text-white text-decoration-none">
-            <h6 className="mb-5">Listado de IPs</h6>
+                <h6 className="mb-3">Listado de IPs</h6>
+            </Link>
+            <Link to="/admin" className="text-white text-decoration-none" >
+                <h6 className="mb-3">{curretnuser.name === "admin" && "Admin"}</h6>
             </Link>
             <div>
             {/* <Button variant="danger" onClick={logout}> */}
-            <Button variant="outline-light" style={{ marginTop: '30vh' }} onClick={logout}>
+            <Button variant="outline-light" style={{ marginTop: '25vh' }} onClick={logout}>
                 Cerrar Sesión
             </Button>
             </div>

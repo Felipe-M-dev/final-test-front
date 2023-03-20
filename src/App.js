@@ -6,6 +6,7 @@ import Perfil from './views/Perfil'
 import Register from './views/Register'
 import ServerList from "./views/ServerList";
 import ServerForm from "./views/ServerForm";
+import Admin from "./views/Admin";
 import './components/FontawesomeIcons'
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
           <Route path='/inventario/new' element={< ServerForm />} />
           <Route path='/inventario/:id/edit' element={< ServerForm />} />
           <Route path="/iplist" element={<IpList />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </BrowserRouter>
     </div>

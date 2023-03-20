@@ -57,7 +57,6 @@ export default function Registrarse() {
       display: 'flex', 
       justifyContent: 'space-around', 
       width: '140vh', 
-      height: '100vh', 
       textAlign: 'center',
       marginLeft:'10rem',
       marginBottom: '50px' }}
